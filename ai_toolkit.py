@@ -74,14 +74,13 @@ def main():
 
     args=parser.parse_args()
 
-    # try:
+    
     if args.command == "translate":
         result = args.func(args.text, args.language)
     else:
         result = args.func(args.text)
     print(result)
-    # except RateLimitError:
-    #     print("API quota exceeded. Please check your API usage or billing.")
+   
 
 if __name__ == "__main__":
     main()
